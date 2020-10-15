@@ -2,6 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Department;
+use App\Models\Doctor;
+use App\Models\Faq;
+use App\Models\Gallery;
+use App\Models\Service;
+use App\Models\Slider;
+use App\Models\Testemonial;
+use Illuminate\Support\Facades\App;
+
 class PagesController extends Controller
 {
 
@@ -9,35 +18,41 @@ class PagesController extends Controller
     {
 
         $title = __('pages.homePage');
-        return view('home', compact('title'));
+        $sliders = Slider::all();
+        $departments = Department::where('featured', true)->orderBy('order', 'ASC')->get();
+        $doctors = Doctor::where('featured', true)->orderBy('order', 'ASC')->get();
+        $testemonials = Testemonial::get();
+        $services = Service::get();
+        return view('home', compact('title', 'sliders', 'departments', 'doctors', 'testemonials', 'services'));
 
     }
     public function aboutPage()
     {
 
         $title = __('pages.about');
-        return view('about', compact('title'));
+        $faqs = Faq::get();
+        $gallery = Gallery::get();
+
+        return view('about', compact('title', 'faqs', 'gallery'));
 
     }
     public function departmentsPage()
     {
 
         $title = __('pages.departments');
-        return view('departments', compact('title'));
+        $departments = Department::orderBy('order', 'ASC')->get();
 
-    }
-    public function departmentPage()
-    {
-
-        $title = __('pages.department');
-        return view('department', compact('title'));
+        return view('departments', compact('title', 'departments'));
 
     }
     public function doctorsPage()
     {
 
+        // $doctors = Doctor::where('featured', true)->orderBy('order', 'ASC')->get();
         $title = __('pages.doctors');
-        return view('doctors', compact('title'));
+        $departments = Department::orderBy('order', 'ASC')->get();
+        // dd($departments);
+        return view('doctors', compact('title', 'departments'));
 
     }
     public function contactPage()

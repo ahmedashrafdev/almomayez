@@ -18,11 +18,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TestemonialSeeder::class,
             ServiceSeeder::class,
-            DoctorSeeder::class,
             PositionSeeder::class,
             SliderSeeder::class,
             DepartmentSeeder::class,
             TestemonialSeeder::class,
+            DoctorSeeder::class,
         ]);
     }
 }

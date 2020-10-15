@@ -21,7 +21,7 @@ class TestemonialSeeder extends Seeder
                 'title_ar' => 'مريض',
                 'content' => 'Mistaken idea of denouncing pleasure and praising pain was
                 born and I will give you a complete account of the system.',
-                'image' => '1.jpg',
+                'image' => 'testemonials/1.png',
             ],
             [
                 'name' => 'Mayar mohamed',
@@ -29,7 +29,7 @@ class TestemonialSeeder extends Seeder
                 'title_ar' => 'طبيبة',
                 'content' => 'Mistaken idea of denouncing pleasure and praising pain was
                 born and I will give you a complete account of the system.',
-                'image' => '2.jpg',
+                'image' => 'testemonials/2.png',
             ],
             [
                 'name' => 'Menna Ahmed',
@@ -37,7 +37,7 @@ class TestemonialSeeder extends Seeder
                 'title_ar' => 'باحثة',
                 'content' => 'Mistaken idea of denouncing pleasure and praising pain was
                 born and I will give you a complete account of the system.',
-                'image' => '3.jpg',
+                'image' => 'testemonials/3.png',
             ],
             [
                 'name' => 'Ahmed Youssef',
@@ -45,7 +45,7 @@ class TestemonialSeeder extends Seeder
                 'title_ar' => 'مريض',
                 'content' => 'Mistaken idea of denouncing pleasure and praising pain was
                 born and I will give you a complete account of the system.',
-                'image' => '4.jpg',
+                'image' => 'testemonials/4.png',
             ],
         ];
 

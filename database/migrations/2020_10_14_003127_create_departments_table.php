@@ -20,6 +20,8 @@ class CreateDepartmentsTable extends Migration
             $table->string('breif');
             $table->string('breif_ar');
             $table->string('icon');
+            $table->boolean('featured')->default(false);
+            $table->tinyInteger('order')->default(1);
             $table->timestamps();
         });
     }

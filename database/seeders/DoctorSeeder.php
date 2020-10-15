@@ -21,7 +21,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Prof. & HOD',
-                'image' => '1.jpg',
+                'image' => 'doctors/1.jpg',
+                'featured' => true,
+                'department_id' => rand(1, 6),
             ],
             [
                 'name' => 'Sara Ahmed',
@@ -29,7 +31,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Asst.Prof',
-                'image' => '2.jpg',
+                'image' => 'doctors/2.jpg',
+                'featured' => true,
+                'department_id' => rand(1, 6),
             ],
             [
                 'name' => 'Islam abousmara',
@@ -37,7 +41,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Asso. Prof',
-                'image' => '3.jpg',
+                'image' => 'doctors/3.jpg',
+                'featured' => true,
+                'department_id' => rand(1, 6),
             ],
             [
                 'name' => 'Momen youssef',
@@ -45,7 +51,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Prof. & HOD',
-                'image' => '4.jpg',
+                'image' => 'doctors/4.jpg',
+                'featured' => true,
+                'department_id' => rand(1, 6),
             ],
             [
                 'name' => 'Mai Mohamed',
@@ -53,7 +61,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Asst.Prof',
-                'image' => '5.jpg',
+                'image' => 'doctors/5.jpg',
+                'featured' => true,
+                'department_id' => rand(1, 6),
             ],
             [
                 'name' => 'Abdelrahman Hussein',
@@ -61,7 +71,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Professor',
-                'image' => '6.jpg',
+                'image' => 'doctors/6.jpg',
+                'department_id' => rand(1, 6),
+
             ],
             [
                 'name' => 'Yassen Ahmed',
@@ -69,7 +81,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Asso. Prof',
-                'image' => '7.jpg',
+                'image' => 'doctors/7.jpg',
+                'department_id' => rand(1, 6),
+
             ],
             [
                 'name' => 'Khaled Yaheia',
@@ -77,7 +91,9 @@ class DoctorSeeder extends Seeder
                 'breif' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                 'breif_ar' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ',
                 'title' => 'Asso. Prof',
-                'image' => '8.jpg',
+                'image' => 'doctors/8.jpg',
+                'department_id' => rand(1, 6),
+
             ],
         ];
 

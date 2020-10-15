@@ -12,13 +12,13 @@
 <section class="welcome-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 fl-right">
                 <div class="img-holder">
                     <img src="{{asset('storage/' . setting('site.aboutimage'))}}" alt="Awesome Image">    
                 </div>
               
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 tx-right">
                 <div class="text-holder">
                     <div class="title">
                         <h1>@lang('pages.welcome_to')</h1>
@@ -98,7 +98,7 @@
                         </li>
                     </ul>
                     <div class="button">
-                    <a class="thm-btn bgclr-1" href="{{route('departments' , app()->getLocale())}}">@lang('pages.departments')</a>
+                    <a class="thm-btn bgclr-1 fl-right" href="{{route('departments' , app()->getLocale())}}">@lang('pages.departments')</a>
                     </div>    
                 </div>
             </div>
@@ -203,140 +203,40 @@
     <div class="container">
         <div class="sec-title mar0auto text-center">
             <h1>@lang('pages.gallery_faq')</h1>
-            <span class="border"></span>
+            <span class="border center-before"></span>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fl-right">
                 <div class="latest-project">
                     <!--Start single blog post-->
+                    @foreach ($gallery as $image)
+                        
                     <div class="single-project-item">
                         <div class="img-holder">
-                            <img src="images/projects/latest-project-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                  <img src="{{asset('storage/' . $image->image)}}" alt="{{$image->alt}}" />
+                 
                         </div>
                     </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-2.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-3.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-4.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-5.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-6.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
+                    @endforeach
+                  
                 </div>    
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 tx-right">
                 <div class="faq-content">
                     <div class="accordion-box">
                         <!--Start single accordion box-->
+                        @foreach($faqs as $faq)
                         <div class="accordion accordion-block">
                             <div class="accord-btn">
-                                <h4>Where is the hospital located?</h4>
+                                <h4>{{$faq->questiong}}</h4>
                             </div>
                             <div class="accord-content">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
+                                <p>{!! $faq->answerg !!}</p>
                             </div>
                         </div>
+                        @endforeach
                         <!--End single accordion box--> 
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn active">
-                                <h4>What is the deposit amount for admission?</h4>
-                            </div>
-                            <div class="accord-content collapsed">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block last">
-                            <div class="accord-btn last">
-                                <h4>What are the visiting hours?</h4>
-                            </div>
-                            <div class="accord-content">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn">
-                                <h4>How many visitors are allowed at a time?</h4>
-                            </div>
-                            <div class="accord-content">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
+                        
                     </div>
                 </div>
             </div>

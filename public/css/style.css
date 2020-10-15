@@ -254,7 +254,7 @@ button {
     background-color: rgba(255, 255, 255, 1);
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../images/icon/preloader.gif);
+    background-image: url(../preloader.gif);
 }
 
 /* Update Mainmenu area Style */
@@ -486,7 +486,7 @@ select:focus {
 .header-area .header-right ul {
     overflow: hidden;
     display: inline-block;
-    float: left;
+    float: right;
     margin: 2px 0 1px;
 }
 .header-area .header-right ul li {
@@ -1081,6 +1081,7 @@ select:focus {
 }
 .medical-departments-area .single-item .text-holder p {
     margin: 0;
+    height: 160px;
 }
 .medical-departments-area .single-item a.readmore {
     border: 1px solid #f0f0f0;
@@ -6132,4 +6133,8 @@ input#datepicker {
 }
 .time-table tbody tr .single-box .inner-content .level span {
     font-weight: 300;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
 }

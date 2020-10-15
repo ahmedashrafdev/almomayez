@@ -7,7 +7,10 @@ return [
     'departments' => 'Departments',
     'get_touch' => 'Get Touch With Us',
     'phone' => 'phone',
+    'alt' => 'Al momayez hospital',
+    'cv' => 'CV',
     'subject' => 'subject',
+    'send_your_data' => 'Send us your cv',
 
     'services' => 'Services',
     'quick_contact' => 'Quick Contact',
@@ -18,6 +21,8 @@ return [
     'everyday' => 'Everyday',
     'am' => 'Am',
     'send' => 'send message',
+    'get_job' => 'Apply for job',
+
     'your_name' => 'Your Name',
     'your_email' => 'Your Email',
     'your_msg' => 'Your Message',

@@ -23,20 +23,20 @@
             </div> --}}
         </div>
         <div class="row">
-            <div class="col-lg-8 col-md-7">
+            <div class="col-lg-8 col-md-7 fl-right tx-right">
                 <div class="contact-form">
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post">
+                    <form id="contact-form" name="contact_form" class="default-form" action="#" method="post">
                         <h2>@lang('pages.send_email')</h2>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 fl-right">
                             <input type="text" name="form_name" value="" placeholder="{{__('pages.your_name')}}" required="">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" name="form_email" value="" placeholder="{{__('pages.your_emial')}}*" required="">
+                                <input type="email" name="form_email" value="" placeholder="{{__('pages.your_email')}}*" required="">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 fl-right">
                                 <input type="text" name="form_phone" value="" placeholder="{{__('pages.phone')}}">
                             </div>
                             <div class="col-md-6">
@@ -57,7 +57,7 @@
                     </form>  
                 </div>
             </div>
-            <div class="col-lg-4 col-md-5">
+            <div class="col-lg-4 col-md-5 tx-right">
                 <div class="quick-contact">
                     <div class="title">
                         <h2>@lang('pages.quick_contact')</h2>

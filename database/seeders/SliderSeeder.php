@@ -31,7 +31,7 @@ class SliderSeeder extends Seeder
               </p>',
                 'content_ar' => '<p>العمل الجاد لإرضاء موظفينا وكذلك عملائنا.
                 ضمان التميز في جودة الرعاية من خلال <br>الأدلة القائمة على الممارسات.</p>',
-                'image' => '1.jpg',
+                'image' => 'sliders/1.jpg',
             ],
             [
                 'title' => '<h1>
@@ -49,7 +49,7 @@ class SliderSeeder extends Seeder
               </p>',
                 'content_ar' => '<p>العمل الجاد لإرضاء موظفينا وكذلك عملائنا.
                 ضمان التميز في جودة الرعاية من خلال <br>الأدلة القائمة على الممارسات.</p>',
-                'image' => '2.jpg',
+                'image' => 'sliders/2.jpg',
             ],
             [
                 'title' => '<h1>
@@ -67,7 +67,7 @@ class SliderSeeder extends Seeder
               </p>',
                 'content_ar' => '<p>العمل الجاد لإرضاء موظفينا وكذلك عملائنا.
                 ضمان التميز في جودة الرعاية من خلال <br>الأدلة القائمة على الممارسات.</p>',
-                'image' => '3.jpg',
+                'image' => 'sliders/3.jpg',
             ],
 
         ];

@@ -21,6 +21,7 @@ class DepartmentSeeder extends Seeder
                 'breif' => 'The specialty of cardiology provides care across the spectrum of cardiovascular diseases from prevention to end-of-life supportive care.',
                 'breif_ar' => 'يوفر تخصص أمراض القلب الرعاية عبر مجموعة متنوعة من أمراض القلب والأوعية الدموية من الوقاية إلى الرعاية الداعمة في نهاية العمر',
                 'icon' => 'cardiology',
+                'featured' => true,
             ],
             [
                 'name' => 'Pulmonology',
@@ -28,6 +29,7 @@ class DepartmentSeeder extends Seeder
                 'breif' => 'Pulmonary care refers to the medical specialty devoted to the lungs. ',
                 'breif_ar' => 'تشير الرعاية الرئوية إلى التخصص الطبي المخصص للرئتين.',
                 'icon' => 'vagina',
+                'featured' => true,
             ],
             [
                 'name' => 'Gynecology',
@@ -35,6 +37,7 @@ class DepartmentSeeder extends Seeder
                 'breif' => 'The Department of Obstetrics and Gynecology at Almomayez hospital offers the finest in medical technology available in the Middle East.',
                 'breif_ar' => 'قدم قسم أمراض النساء والولادة في مستشفى المميز أرقى التقنيات الطبية المتوفرة في الشرق الأوسط.',
                 'icon' => 'neurology',
+                'featured' => true,
             ],
             [
                 'name' => 'Neurology',
@@ -42,6 +45,7 @@ class DepartmentSeeder extends Seeder
                 'breif' => 'The Neurology department in the Saudi Al momayez hospital operates through well trained and experienced consultants, ',
                 'breif_ar' => 'يعمل قسم الأمراض العصبية في مستشفى المميز السعودي من خلال استشاريين مدربين وذوي خبرة جيدة ،',
                 'icon' => 'lungs',
+                'featured' => true,
             ],
             [
                 'name' => 'Urology',
@@ -49,6 +53,7 @@ class DepartmentSeeder extends Seeder
                 'breif' => 'Al momayez Hospital - Cairo offers a wide range of medical and surgical services related to the urinary system (kidneys, bladder and urethra), the genital system and prostate.',
                 'breif_ar' => 'تقدم مستشفى المميز بالقاهرة مجموعة واسعة من الخدمات الطبية والجراحية المتعلقة بالجهاز البولي (الكلى والمثانة والإحليل) والجهاز التناسلي والبروستاتا.',
                 'icon' => 'kidneys',
+                'featured' => true,
             ],
             [
                 'name' => 'Gastrology',

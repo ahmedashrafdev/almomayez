@@ -21,6 +21,10 @@ class CreateDoctorsTable extends Migration
             $table->string('breif_ar');
             $table->string('title');
             $table->string('image');
+            $table->boolean('featured')->default(false);
+            $table->tinyInteger('order')->default(1);
+            $table->unsignedBigInteger('department_id');
+            $table->foreign('department_id')->references('id')->on('departments');
             $table->timestamps();
         });
     }

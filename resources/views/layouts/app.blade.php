@@ -52,7 +52,8 @@
       href="images/favicon/favicon-16x16.png"
       sizes="16x16"
     />
-
+    {{-- <link rel="shortcut icon" href="{{asset('storage/' . setting('site.icon'))}}"> --}}
+    <link rel="icon" type="image/png" href="{{asset('storage/' . setting('site.icon'))}}" sizes="16x16">
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -68,15 +69,15 @@
       <section class="top-bar-area">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 fl-right tx-right">
               <div class="top-left">
                 <p>
-                  <span class="flaticon-phone"></span>@lang('pages.24/7') {{setting('site.ambulancephone')}}
+                  <span class="fl-right flaticon-phone ml-left-5"></span>@lang('pages.24/7') {{setting('site.ambulancephone')}}
                 </p>
               </div>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-              <div class="top-right clearfix">
+            <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 fl-left tx-left">
+              <div class="top-right clearfix fl-left">
                 <ul class="social-links">
                   <li>
                     <a href="{{setting('site.fadecbook')}}"><i class="fa fa-facebook"></i></a>
@@ -100,15 +101,15 @@
       <section class="header-area">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-3 col-md-3 fl-right">
               <div class="logo">
                 <a href="{{route('home' , app()->getLocale())}}">
-                <img src="{{asset('storage/' . setting('site.logo'))}}" alt="Awesome Logo" />
+                <img src="{{asset('storage/' . setting('site.logo'))}}" alt="__('pages.alt')" />
                 </a>
               </div>
             </div>
-            <div class="col-lg-9 col-md-9">
-              <div class="header-right">
+            <div class="col-lg-9 col-md-9 ">
+              <div class="header-right ">
                 <ul>
                   <li>
                     <div class="icon-holder">
@@ -124,9 +125,17 @@
                       <span class="flaticon-pin"></span>
                     </div>
                     <div class="text-holder">
-                    <h4>{{setting('site.address')}}</h4>
-                      <span>{{setting('site.address2')}}</span>
-                    </div>
+                      @if (app()->getLocale() !== 'ar')
+                        
+                            
+                        <h4>{{setting('site.address')}}</h4>
+                          <span>{{setting('site.address2')}}</span>
+                        </div>
+                        @else
+                        <h4>{{setting('site.addressar')}}</h4>
+                          <span>{{setting('site.addressar2')}}</span>
+                        </div>
+                        @endif
                   </li>
                   <li>
                     <div class="icon-holder">
@@ -138,13 +147,7 @@
                     </div>
                   </li>
                 </ul>
-                <div class="search-button pull-right">
-                  <div class="toggle-search">
-                    <button>
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -198,25 +201,21 @@
                 </div>
                 <div class="navbar-collapse collapse clearfix">
                   <ul class="navigation clearfix">
-                    <li class="current"><a href="{{route('home' , app()->getLocale())}}">@lang('pages.home')</a></li>
-                    <li class="dropdown">
+                  <li class="{{Route::currentRouteName() == 'home' ? 'current' : ''}}"><a href="{{route('home' , app()->getLocale())}}">@lang('pages.home')</a></li>
+                    <li class="{{Route::currentRouteName() == 'about' ? 'current' : ''}}">
                       <a href="{{route('about' , app()->getLocale())}}">@lang('pages.about')</a>
                      
                     </li>
-                    <li class="dropdown">
+                    <li  class="{{Route::currentRouteName() == 'departments' ? 'current' : ''}}">
                       <a href="{{route('departments' , app()->getLocale())}}">@lang('pages.departments')</a>
-                      <ul>
-                        <li>
-                          <a href="{{route('department' , app()->getLocale())}}">Cardiac Clinic</a>
-                        </li>
-                      </ul>
+                     
                     </li>
                     {{-- <li><a href="time-table.html">@lang('pages.time_table')</a></li> --}}
                     
                     
-                    <li><a href="{{route('doctors' , app()->getLocale())}}">@lang('pages.doctors')</a></li>
-                    <li><a href="{{route('careers' , app()->getLocale())}}">@lang('pages.careers')</a></li>
-                    <li><a href="{{route('contact' , app()->getLocale())}}">@lang('pages.contact')</a></li>
+                    <li class="{{Route::currentRouteName() == 'doctors' ? 'current' : ''}}"><a href="{{route('doctors' , app()->getLocale())}}">@lang('pages.doctors')</a></li>
+                    <li class="{{Route::currentRouteName() == 'careers' ? 'current' : ''}}"><a href="{{route('careers' , app()->getLocale())}}">@lang('pages.careers')</a></li>
+                    <li class="{{Route::currentRouteName() == 'contact' ? 'current' : ''}}"><a href="{{route('contact' , app()->getLocale())}}">@lang('pages.contact')</a></li>
                   </ul>
                 </div>
               </nav>
@@ -226,11 +225,11 @@
                 
                 <div class="consultation-button">
                     @if (app()->getLocale() == 'en')
-                    <a href="{{ route(Route::currentRouteName(), 'ar') }}">
+                    <a href="{{ route(Route::currentRouteName(), 'ar') }}" class="tx-left text-right">
                         <i class="fa fa-globe"></i>العربية
                       </a>
                     @else
-                    <a href="{{ route(Route::currentRouteName(), 'en') }}">
+                    <a href="{{ route(Route::currentRouteName(), 'en') }}" class="tx-left text-right">
                         <i class="fa fa-globe"></i>English
                       </a>
                     @endif
@@ -245,9 +244,9 @@
       <!--End mainmenu area-->
       <!--End header-search  area-->
      @php
-         $name = Route::currentRouteName();
+         $routeName = Route::currentRouteName();
      @endphp
-     @if ($name!=='home')
+     @if ($routeName!=='home')
      <section class="breadcrumb-area" style="background-image: url({{asset('storage/' . setting('site.headerimage'))}});">
       <div class="container">
           <div class="row">
@@ -284,7 +283,7 @@
         <div class="container">
           <div class="row">
             <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 fl-right tx-right col-md-6 col-sm-6 col-xs-12">
               <div class="single-footer-widget pd-bottom50">
                 <div class="title">
                   <h3>@lang('pages.about')</h3>
@@ -317,10 +316,10 @@
             </div>
             <!--End single footer widget-->
             <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 fl-right tx-right col-md-6 col-sm-6 col-xs-12">
               <div class="single-footer-widget pd-bottom50">
                 <div class="title">
-                  <h3>@lang('useful_links')</h3>
+                  <h3>@lang('pages.useful_links')</h3>
                   <span class="border"></span>
                 </div>
                 <ul class="usefull-links fl-lft">
@@ -348,7 +347,7 @@
             </div>
             <!--End single footer widget-->
             <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 fl-right tx-right col-md-6 col-sm-6 col-xs-12">
               <div class="single-footer-widget mar-bottom">
                 <div class="title">
                   <h3>@lang('pages.contact_details')</h3>
@@ -401,7 +400,7 @@
             </div>
             <!--Start single footer widget-->
             <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 fl-right tx-right col-md-6 col-sm-6 col-xs-12">
               <div class="single-footer-widget clearfix">
                 <div class="title">
                   <h3>@lang('pages.send_email')</h3>
@@ -454,7 +453,7 @@
       <section class="footer-bottom-area">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 fl-right tx-right rtl">
               <div class="copyright-text">
                 <p>
                  @lang('pages.copyright')
@@ -465,7 +464,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <ul class="footer-social-links">
+              <ul class="footer-social-links fl-left">
                 <li>
                 <a href="{{setting('site.facebook')}}"><i class="fa fa-facebook"></i></a>
                 </li>
